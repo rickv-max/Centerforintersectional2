@@ -4,53 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Center for Intersectional</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Center for Intersectional</div>
-    <nav id="menu" class="menu">
-      <a href="#layanan">Layanan</a>
-      <a href="#program">Program</a>
-      <a href="#tim">Tim Kami</a>
-    </nav>
-    <button class="hamburger" id="hamburger">&#9776;</button>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Center for Intersectional</div>
+      <nav class="nav" id="navbar">
+        <ul>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#tim">Tim Kami</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Stop Kekerasan Seksual</h1>
-      <p>Bersama kita bisa menciptakan ruang aman dan setara bagi semua.</p>
-      <button id="openModal">Ajukan Bantuan</button>
+  <!-- Hero Section (Image + Form) -->
+  <section class="hero" id="ajukan-bantuan">
+    <div class="hero-image">
+      <img src="https://cdn.dribbble.com/userupload/17873768/file/original-2c47a952e4edc0babf88f12734bdf3b8.jpg" alt="Stop Kekerasan Seksual" />
     </div>
-  </section>
-
-  <!-- Modal Form -->
-  <div id="contact-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" id="closeModal">&times;</span>
+    <div class="hero-form">
       <h2>Ajukan Bantuan</h2>
-      <form action="https://formsubmit.co/rickymaulana080503@gmail.com" method="POST">
+      <form action="https://formspree.io/f/xzbowodq" method="POST">
         <label for="nama">Nama</label>
-        <input type="text" name="nama" required />
-        
+        <input type="text" id="nama" name="nama" required />
+
         <label for="email">Email</label>
-        <input type="email" name="email" required />
-        
-        <label for="telepon">Telepon</label>
-        <input type="tel" name="telepon" required />
-        
-        <label for="pesan">Ceritakan Masalah Anda</label>
-        <textarea name="pesan" rows="4" required></textarea>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="pesan">Pesan / Cerita Anda</label>
+        <textarea id="pesan" name="pesan" rows="5" required></textarea>
 
         <button type="submit">Kirim</button>
       </form>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Placeholder Section: Layanan -->
+  <section id="layanan" style="padding: 40px 20px; text-align: center;">
+    <h2>Layanan Kami</h2>
+    <p>Kami menyediakan dukungan hukum, konseling, dan pendampingan bagi korban kekerasan seksual.</p>
+  </section>
+
+  <!-- Placeholder Section: Program -->
+  <section id="program" style="padding: 40px 20px; text-align: center; background-color: #fdf4ff;">
+    <h2>Program Unggulan</h2>
+    <p>Program edukasi, kampanye, dan pendampingan komunitas secara aktif di berbagai daerah.</p>
+  </section>
+
+  <!-- Placeholder Section: Tim Kami -->
+  <section id="tim" style="padding: 40px 20px; text-align: center;">
+    <h2>Tim Kami</h2>
+    <p>Tim kami terdiri dari psikolog, advokat, relawan, dan aktivis yang berpengalaman.</p>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navbar = document.getElementById("navbar");
+
+    hamburger.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
