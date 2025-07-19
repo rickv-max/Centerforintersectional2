@@ -1,6 +1,4 @@
-const hamburger = document.getElementById("hamburger");
-const navbar = document.getElementById("navbar");
-
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
+function toggleMenu() {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('show');
+}
