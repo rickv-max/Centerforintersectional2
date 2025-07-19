@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Center for Intersectional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Center for Intersectional</div>
+    <nav id="menu" class="menu">
+      <a href="#layanan">Layanan</a>
+      <a href="#program">Program</a>
+      <a href="#tim">Tim Kami</a>
+    </nav>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Stop Kekerasan Seksual</h1>
+      <p>Bersama kita bisa menciptakan ruang aman dan setara bagi semua.</p>
+      <button id="openModal">Ajukan Bantuan</button>
+    </div>
+  </section>
+
+  <!-- Modal Form -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <h2>Ajukan Bantuan</h2>
+      <form action="https://formsubmit.co/rickymaulana080503@gmail.com" method="POST">
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" required />
+        
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+        
+        <label for="telepon">Telepon</label>
+        <input type="tel" name="telepon" required />
+        
+        <label for="pesan">Ceritakan Masalah Anda</label>
+        <textarea name="pesan" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
